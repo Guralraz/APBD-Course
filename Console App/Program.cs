@@ -16,3 +16,21 @@ static double ObliczSrednia(int[] liczby)
     }
     return suma / liczby.Length;
 }
+
+static int ZnajdzMax(int[] liczby)
+{
+    if (liczby == null || liczby.Length == 0)
+    {
+        throw new ArgumentException("Tablica nie może być pusta.");
+    }
+
+    int maksymalnaWartosc = liczby[0];
+    foreach (int liczba in liczby)
+    {
+        if (liczba > maksymalnaWartosc)
+        {
+            maksymalnaWartosc = liczba;
+        }
+    }
+    return maksymalnaWartosc;
+}
